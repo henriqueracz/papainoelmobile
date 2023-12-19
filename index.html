@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vertical Virtual Piano</title>
+  <title>Large Vertical Virtual Piano</title>
   <style>
     body {
       display: flex;
@@ -11,29 +11,28 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-      /* background-color: #f8f8f8; Light gray background */
     }
 
     #piano {
       display: flex;
       flex-direction: column-reverse;
-      height: 80%; /* Adjust the height percentage based on your preference */
-      max-height: 800px; /* Adjust the maximum height for better responsiveness */
-      margin: 0 auto; /* Center the piano on the screen */
+      height: 80vh;
+      max-height: 800px;
+      margin: 0 auto;
     }
 
     .key {
-      width: 120px;
-      height: 40px;
-      border: 1px solid #dcdcdc; /* Light gray border for keys */
+      width: 150px;
+      height: 50px;
+      border: 1px solid #dcdcdc;
       cursor: pointer;
-      background-color: #f9f9f9; /* Light gray key color */
+      background-color: #f9f9f9;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       transition: background-color 0.2s ease, transform 0.1s ease;
     }
 
     .key:hover {
-      background-color: #e0e0e0; /* Slightly darker gray on hover */
+      background-color: #e0e0e0;
     }
 
     .key.active {
@@ -42,11 +41,11 @@
     }
 
     .black-key {
-      background-color: #333; /* Dark gray for black keys */
-      width: 80px;
-      height: 30px;
-      margin-top: -15px;
-      margin-bottom: -15px;
+      background-color: #333;
+      width: 100px;
+      height: 40px;
+      margin-top: -20px;
+      margin-bottom: -20px;
       position: relative;
       z-index: 1;
       cursor: pointer;
@@ -55,7 +54,7 @@
     }
 
     .black-key:hover {
-      background-color: #444; /* Slightly darker gray on hover for black keys */
+      background-color: #444;
     }
 
     .black-key.active {
