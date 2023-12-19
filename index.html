@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vertical Child's Piano</title>
+  <title>Mobile Child's Piano</title>
   <style>
     body {
       display: flex;
@@ -14,16 +14,16 @@
       background-color: white; /* White background */
     }
 
-    #vertical-south-park-piano {
+    #mobile-south-park-piano {
       display: flex;
-      flex-direction: column-reverse; /* Adjusted for a vertical layout */
+      flex-direction: column;
       align-items: center;
       gap: 5px; /* Adjust the gap between keys */
     }
 
     .key {
-      width: 150px; /* Adjusted width for a vertical layout */
-      height: 50px;
+      width: 50px;
+      height: 200px;
       border: 1px solid black; /* Black border for keys */
       cursor: pointer;
       background-color: white; /* White key color */
@@ -42,9 +42,10 @@
 
     .black-key {
       background-color: black; /* Black color for black keys */
-      width: 100px; /* Adjusted width for a vertical layout */
-      height: 30px;
-      margin-bottom: -15px; /* Overlap with white keys for a child-like appearance */
+      height: 120px;
+      width: 30px;
+      margin-left: -15px;
+      margin-right: -15px;
       position: relative;
       z-index: 1;
       cursor: pointer;
@@ -63,11 +64,11 @@
   </style>
 </head>
 <body>
-  <div id="vertical-south-park-piano"></div>
+  <div id="mobile-south-park-piano"></div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const piano = document.getElementById("vertical-south-park-piano");
+      const piano = document.getElementById("mobile-south-park-piano");
 
       const keys = [
         { note: "C4", sound: "c4.mp3", key: "a" },
