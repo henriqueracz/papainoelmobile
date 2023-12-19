@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Large Vertical Virtual Piano</title>
+  <title>Vertical Child's Piano</title>
   <style>
     body {
       display: flex;
@@ -11,28 +11,28 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
+      background-color: white; /* White background */
     }
 
-    #piano {
+    #vertical-south-park-piano {
       display: flex;
-      flex-direction: column-reverse;
-      height: 80vh;
-      max-height: 800px;
-      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px; /* Adjust the gap between keys */
     }
 
     .key {
-      width: 150px;
+      width: 150px; /* Adjusted width for a vertical layout */
       height: 50px;
-      border: 1px solid #dcdcdc;
+      border: 1px solid black; /* Black border for keys */
       cursor: pointer;
-      background-color: #f9f9f9;
+      background-color: white; /* White key color */
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       transition: background-color 0.2s ease, transform 0.1s ease;
     }
 
     .key:hover {
-      background-color: #e0e0e0;
+      background-color: #e0e0e0; /* Slightly darker gray on hover */
     }
 
     .key.active {
@@ -41,11 +41,10 @@
     }
 
     .black-key {
-      background-color: #333;
-      width: 100px;
-      height: 40px;
-      margin-top: -20px;
-      margin-bottom: -20px;
+      background-color: black; /* Black color for black keys */
+      width: 100px; /* Adjusted width for a vertical layout */
+      height: 30px;
+      margin-bottom: -15px; /* Overlap with white keys for a child-like appearance */
       position: relative;
       z-index: 1;
       cursor: pointer;
@@ -54,7 +53,7 @@
     }
 
     .black-key:hover {
-      background-color: #444;
+      background-color: #222; /* Slightly darker gray on hover for black keys */
     }
 
     .black-key.active {
@@ -64,11 +63,11 @@
   </style>
 </head>
 <body>
-  <div id="piano"></div>
+  <div id="vertical-south-park-piano"></div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const piano = document.getElementById("piano");
+      const piano = document.getElementById("vertical-south-park-piano");
 
       const keys = [
         { note: "C4", sound: "c4.mp3", key: "a" },
