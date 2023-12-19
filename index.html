@@ -11,20 +11,20 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-     
+      /* background-color: #f8f8f8; Light gray background */
     }
 
     #piano {
       display: flex;
       flex-direction: column-reverse;
       height: 80%; /* Adjust the height percentage based on your preference */
-      max-height: 600px; /* Adjust the maximum height for better responsiveness */
+      max-height: 800px; /* Adjust the maximum height for better responsiveness */
       margin: 0 auto; /* Center the piano on the screen */
     }
 
     .key {
       width: 120px;
-      height: 30px;
+      height: 40px;
       border: 1px solid #dcdcdc; /* Light gray border for keys */
       cursor: pointer;
       background-color: #f9f9f9; /* Light gray key color */
@@ -44,9 +44,9 @@
     .black-key {
       background-color: #333; /* Dark gray for black keys */
       width: 80px;
-      height: 20px;
-      margin-top: -10px;
-      margin-bottom: -10px;
+      height: 30px;
+      margin-top: -15px;
+      margin-bottom: -15px;
       position: relative;
       z-index: 1;
       cursor: pointer;
