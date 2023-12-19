@@ -16,7 +16,7 @@
 
     #vertical-south-park-piano {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse; /* Adjusted for a vertical layout */
       align-items: center;
       gap: 5px; /* Adjust the gap between keys */
     }
@@ -36,7 +36,7 @@
     }
 
     .key.active {
-      transform: translateX(4px);
+      transform: translateY(4px);
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
     }
 
@@ -57,7 +57,7 @@
     }
 
     .black-key.active {
-      transform: translateX(4px);
+      transform: translateY(4px);
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
     }
   </style>
