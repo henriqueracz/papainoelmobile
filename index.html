@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobile Child's Piano</title>
+  <title>South Park Vertical Virtual Piano</title>
   <style>
     body {
       display: flex;
@@ -14,16 +14,17 @@
       background-color: white; /* White background */
     }
 
-    #mobile-south-park-piano {
+    #south-park-piano {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px; /* Adjust the gap between keys */
+      flex-direction: column-reverse;
+      height: 80vh;
+      max-height: 800px;
+      margin: 0 auto;
     }
 
     .key {
-      width: 50px;
-      height: 200px;
+      width: 150px;
+      height: 50px;
       border: 1px solid black; /* Black border for keys */
       cursor: pointer;
       background-color: white; /* White key color */
@@ -36,16 +37,16 @@
     }
 
     .key.active {
-      transform: translateY(4px);
+      transform: translateX(4px);
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
     }
 
     .black-key {
       background-color: black; /* Black color for black keys */
-      height: 120px;
-      width: 30px;
-      margin-left: -15px;
-      margin-right: -15px;
+      width: 100px;
+      height: 40px;
+      margin-top: -20px;
+      margin-bottom: -20px;
       position: relative;
       z-index: 1;
       cursor: pointer;
@@ -58,17 +59,17 @@
     }
 
     .black-key.active {
-      transform: translateY(4px);
+      transform: translateX(4px);
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
     }
   </style>
 </head>
 <body>
-  <div id="mobile-south-park-piano"></div>
+  <div id="south-park-piano"></div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const piano = document.getElementById("mobile-south-park-piano");
+      const piano = document.getElementById("south-park-piano");
 
       const keys = [
         { note: "C4", sound: "c4.mp3", key: "a" },
